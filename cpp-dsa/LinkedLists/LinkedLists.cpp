@@ -54,5 +54,5 @@ void LinkedList::PrintTail()
 
 void LinkedList::PrintLength()
 {
-	std::cout << "Head: " << length << std::endl;
+	std::cout << "Length: " << length << std::endl;
 }
