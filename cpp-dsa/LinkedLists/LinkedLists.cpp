@@ -31,7 +31,7 @@ LinkedList::~LinkedList()
 	}
 }
 
-void LinkedList::PrintList()
+void LinkedList::printList()
 {
 	Node* temp = head;
 	
@@ -42,17 +42,66 @@ void LinkedList::PrintList()
 	}
 }
 
-void LinkedList::PrintHead()
+void LinkedList::printHead()
 {
 	std::cout << "Head: " << head->value << std::endl;
 }
 
-void LinkedList::PrintTail()
+void LinkedList::printTail()
 {
 	std::cout << "Head: " << tail->value << std::endl;
 }
 
-void LinkedList::PrintLength()
+void LinkedList::printLength()
 {
 	std::cout << "Length: " << length << std::endl;
+}
+
+void LinkedList::append(int value) // O(1)
+{
+	Node* newNode = new Node(value);
+
+	if (length == 0)
+	{
+		head = newNode;
+		tail = newNode;
+	}
+	else
+	{
+		tail->next = newNode;
+		tail = newNode;
+	}
+
+	length++;
+}
+
+void LinkedList::removeLast() // O(n)
+{
+	if (length == 0)
+	{
+		std::cout << "Error: The Linked List is empty" << std::endl;
+	}
+	else if (length == 1)
+	{
+		delete head;
+		head = nullptr;
+		tail = nullptr;
+
+		length--;
+	}
+	else
+	{
+		Node* temp = head;
+
+		while (temp->next->next)
+		{
+			temp = temp->next;
+		}
+
+		temp->next = nullptr;
+		delete tail;
+		tail = temp;
+
+		length--;
+	}
 }

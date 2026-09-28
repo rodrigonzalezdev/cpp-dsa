@@ -22,8 +22,11 @@ public:
 	LinkedList(int value);
 	~LinkedList();
 
-	void PrintList();
-	void PrintHead();
-	void PrintTail();
-	void PrintLength();
+	void printList();
+	void printHead();
+	void printTail();
+	void printLength();
+
+	void append(int value);
+	void removeLast();
 };
