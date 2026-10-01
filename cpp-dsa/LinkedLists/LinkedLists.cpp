@@ -79,7 +79,8 @@ void LinkedList::removeLast() // O(n)
 {
 	if (length == 0)
 	{
-		std::cout << "Error: The Linked List is empty" << std::endl;
+		std::cout << "Error: Linked List is empty" << std::endl;
+		return;
 	}
 	else if (length == 1)
 	{
@@ -101,6 +102,49 @@ void LinkedList::removeLast() // O(n)
 		temp->next = nullptr;
 		delete tail;
 		tail = temp;
+
+		length--;
+	}
+}
+
+void LinkedList::prepend(int value) // O(1)
+{
+	Node* newNode = new Node(value);
+
+	if (length == 0)
+	{
+		head = newNode;
+		tail = newNode;
+	}
+	else
+	{
+		newNode->next = head;
+		head = newNode;
+	}
+
+	length++;
+}
+
+void LinkedList::removeFirst() // O(1)
+{
+	if (length == 0)
+	{
+		std::cout << "Error: Linked List is empty" << std::endl;
+		return;
+	}
+	else if (length == 1)
+	{
+		delete head;
+		head = nullptr;
+		tail = nullptr;
+
+		length--;
+	}
+	else
+	{
+		Node* temp = head;
+		head = head->next;
+		delete temp;
 
 		length--;
 	}
