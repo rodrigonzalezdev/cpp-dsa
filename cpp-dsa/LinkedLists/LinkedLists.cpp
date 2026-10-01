@@ -213,7 +213,7 @@ bool LinkedList::insert(int index, int value) // O(n)
 	return true;
 }
 
-void LinkedList::remove(int index)
+void LinkedList::remove(int index) // O(n)
 {
 	if (index < 0 || index >= length)
 	{
@@ -240,4 +240,23 @@ void LinkedList::remove(int index)
 	delete target;
 
 	length--;
+}
+
+void LinkedList::reverse() // O(n)
+{
+	Node* temp = head;
+	head = tail;
+	tail = temp;
+
+	Node* before = nullptr;
+	Node* after = temp->next;
+
+	for (int i = 0; i < length; i++)
+	{
+		after = temp->next;
+		temp->next = before;
+		before = temp;
+		temp = after;
+	}
+
 }
