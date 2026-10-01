@@ -49,7 +49,7 @@ void LinkedList::printHead()
 
 void LinkedList::printTail()
 {
-	std::cout << "Head: " << tail->value << std::endl;
+	std::cout << "Tail: " << tail->value << std::endl;
 }
 
 void LinkedList::printLength()
@@ -180,4 +180,64 @@ bool LinkedList::set(int index, int value) // O(n)
 	temp->value = value;
 
 	return true;
+}
+
+bool LinkedList::insert(int index, int value) // O(n)
+{
+	if (index < 0 || index > length)
+	{
+		std::cout << "Error: Index out of bounds" << std::endl;
+		return false;
+	}
+
+	if (index == 0)
+	{
+		prepend(value);
+		return true;
+	}
+
+	if (index == length)
+	{
+		append(value);
+		return true;
+	}
+
+	Node* newNode = new Node(value);
+	Node* temp = get(index - 1);
+
+	newNode->next = temp->next;
+	temp->next = newNode;
+
+	length++;
+
+	return true;
+}
+
+void LinkedList::remove(int index)
+{
+	if (index < 0 || index >= length)
+	{
+		std::cout << "Error: Index out of bounds" << std::endl;
+		return;
+	}
+
+	if (index == 0)
+	{
+		removeFirst();
+		return;
+	}
+
+	if (index == length - 1)
+	{
+		removeLast();
+		return;
+	}
+
+	Node* temp = get(index - 1);
+	Node* target = temp->next;
+
+	temp->next = target->next;
+	delete target;
+
+	length--;
 }
