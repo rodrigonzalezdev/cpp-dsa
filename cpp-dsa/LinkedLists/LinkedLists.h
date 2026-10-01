@@ -31,4 +31,6 @@ public:
 	void removeLast();
 	void prepend(int value);
 	void removeFirst();
+	Node* get(int index);
+	bool set(int index, int value);
 };

@@ -149,3 +149,35 @@ void LinkedList::removeFirst() // O(1)
 		length--;
 	}
 }
+
+Node* LinkedList::get(int index) // O(n)
+{
+	if (index < 0 || index >= length)
+	{
+		std::cout << "Error: Index out of bounds" << std::endl;
+		return nullptr;
+	}
+
+	Node* temp = head;
+
+	for (int i = 0; i < index; i++)
+	{
+		temp = temp->next;
+	}
+
+	return temp;
+}
+
+bool LinkedList::set(int index, int value) // O(n)
+{
+	Node* temp = get(index);
+
+	if (temp == nullptr)
+	{
+		return false;
+	}
+
+	temp->value = value;
+
+	return true;
+}
