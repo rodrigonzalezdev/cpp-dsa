@@ -31,7 +31,7 @@ LinkedList::~LinkedList()
 	}
 }
 
-void LinkedList::printList()
+void LinkedList::printList() const
 {
 	Node* temp = head;
 	
@@ -42,19 +42,14 @@ void LinkedList::printList()
 	}
 }
 
-void LinkedList::printHead()
+Node* LinkedList::getHead() const
 {
-	std::cout << "Head: " << head->value << std::endl;
+	return head;
 }
 
-void LinkedList::printTail()
+Node* LinkedList::getTail() const
 {
-	std::cout << "Tail: " << tail->value << std::endl;
-}
-
-void LinkedList::printLength()
-{
-	std::cout << "Length: " << length << std::endl;
+	return tail;
 }
 
 void LinkedList::append(int value) // O(1)
@@ -150,7 +145,7 @@ void LinkedList::removeFirst() // O(1)
 	}
 }
 
-Node* LinkedList::get(int index) // O(n)
+Node* LinkedList::get(int index) const // O(n)
 {
 	if (index < 0 || index >= length)
 	{

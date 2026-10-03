@@ -22,16 +22,16 @@ public:
 	LinkedList(int value);
 	~LinkedList();
 
-	void printList();
-	void printHead();
-	void printTail();
-	void printLength();
+	void printList() const;
+
+	Node* getHead() const;
+	Node* getTail() const;
 
 	void append(int value);
 	void removeLast();
 	void prepend(int value);
 	void removeFirst();
-	Node* get(int index);
+	Node* get(int index) const;
 	bool set(int index, int value);
 	bool insert(int index, int value);
 	void remove(int index);

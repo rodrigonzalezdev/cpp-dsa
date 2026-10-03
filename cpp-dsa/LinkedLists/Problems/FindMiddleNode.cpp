@@ -1,0 +1,22 @@
+#include "../LinkedLists.h"
+#include "Problems.h"
+
+/*
+	- Not using length attribute
+	- Not allowed to calculate length
+	- Only allowed to loop through the list once
+*/
+
+Node* FindMiddleNode(const LinkedList& list)
+{
+	Node* slow = list.getHead();
+	Node* fast = list.getHead();
+
+	while (fast && fast->next)
+	{
+		slow = slow->next;
+		fast = fast->next->next;
+	}
+
+	return slow;
+}
