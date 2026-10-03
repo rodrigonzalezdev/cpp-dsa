@@ -18,5 +18,6 @@ Node* FindMiddleNode(const LinkedList& list)
 		fast = fast->next->next;
 	}
 
-	return slow;
+	return slow; // slow moves through the list at half the speed of fast, 
+			     // so when fast is at the end of the list, slow will be in the middle
 }
