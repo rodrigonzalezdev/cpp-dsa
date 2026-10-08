@@ -1,4 +1,5 @@
 #pragma once
 
 // Find Middle Node
-Node* FindMiddleNode(const LinkedList& list);
+Node* findMiddleNode(const LinkedList& list);
+bool hasLoop(const LinkedList& list);

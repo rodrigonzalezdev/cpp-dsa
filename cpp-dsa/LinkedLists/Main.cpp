@@ -16,7 +16,7 @@ int main()
 
 	list.printList();
 
-	std::cout << "Middle node: " << FindMiddleNode(list)->value << std::endl;
+	std::cout << "Middle node: " << findMiddleNode(list)->value << std::endl;
 
 
 	return 0;
