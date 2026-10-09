@@ -145,6 +145,7 @@
   <ItemGroup>
     <ClCompile Include="LinkedLists.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Problems\FindKthFromEnd.cpp" />
     <ClCompile Include="Problems\FindMiddleNode.cpp" />
     <ClCompile Include="Problems\HasLoop.cpp" />
   </ItemGroup>
