@@ -1,7 +1,7 @@
 #include "../LinkedLists.h"
 #include "Problems.h"
 
-bool hasLoop(const LinkedList& list)
+bool hasLoop(const LinkedList& list) // O(n)
 {
 	Node* slow = list.getHead();
 	Node* fast = list.getHead();

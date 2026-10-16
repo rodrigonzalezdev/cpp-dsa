@@ -7,7 +7,7 @@
 	- Only allowed to loop through the list once
 */
 
-Node* findMiddleNode(const LinkedList& list)
+Node* findMiddleNode(const LinkedList& list) // O(n)
 {
 	Node* slow = list.getHead();
 	Node* fast = list.getHead();
