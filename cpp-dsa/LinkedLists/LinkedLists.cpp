@@ -52,6 +52,16 @@ Node* LinkedList::getTail() const
 	return tail;
 }
 
+void LinkedList::increaseLength()
+{
+	++length;
+}
+
+void LinkedList::decreaseLength()
+{
+	--length;
+}
+
 void LinkedList::append(int value) // O(1)
 {
 	Node* newNode = new Node(value);

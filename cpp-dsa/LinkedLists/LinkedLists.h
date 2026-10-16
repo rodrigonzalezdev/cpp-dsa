@@ -27,6 +27,9 @@ public:
 	Node* getHead() const;
 	Node* getTail() const;
 
+	void increaseLength();
+	void decreaseLength();
+
 	void append(int value);
 	void removeLast();
 	void prepend(int value);
