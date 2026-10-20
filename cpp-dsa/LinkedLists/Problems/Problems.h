@@ -1,6 +1,6 @@
 #pragma once
 
-// Different problems make difference assumptions about the Linked List implementation
+// Different problems make different assumptions about the Linked List implementation
 
 Node* findMiddleNode(const LinkedList& list); // O(n)
 bool hasLoop(const LinkedList& list); // O(n)
