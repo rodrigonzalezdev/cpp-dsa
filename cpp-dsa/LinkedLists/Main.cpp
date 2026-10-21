@@ -7,16 +7,33 @@ int main()
 	
 	LinkedList list(1);
 
-	list.append(2);
-	list.append(3);
-	list.append(4);
-	list.append(5);
-	list.append(6);
-	list.append(7);
+	list.append(1);
+	list.append(1);
+	list.append(1);
+
 
 	list.printList();
 
-	std::cout << "Middle node: " << findMiddleNode(list)->value << std::endl;
+	auto result = binaryToDecimal(list);
+
+	if (result)
+	{
+		std::cout << "Decimal value: " << result.value() << std::endl;
+	}
+	else
+	{
+		switch (result.error())
+		{
+		case BinaryConversionError::InvalidDigit:
+			std::cerr << "Error: Invalid binary nmber.";
+			break;
+		case BinaryConversionError::Overflow:
+			std::cerr << "Error: Value exceeds unsigned int range.";
+			break;
+		default:
+			std::cerr << "Error.";
+		}
+	}
 
 
 	return 0;

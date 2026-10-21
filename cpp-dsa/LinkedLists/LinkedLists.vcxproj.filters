@@ -41,5 +41,8 @@
     <ClCompile Include="Problems\RemoveDuplicates.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\BinaryToDecimal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -14,7 +14,8 @@ bool hasLoop(const LinkedList& list) // O(n)
 		if (slow == fast)
 		{
 			return true; // if the list has a loop, fast and fast->next will never be nullptr
-						 // so the loop continues until slow and fast meet
+			// so the loop continues until slow and fast meet
 		}
 	}
-	return false; 
+	return false;
+}
