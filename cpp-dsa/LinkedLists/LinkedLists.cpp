@@ -52,6 +52,16 @@ Node* LinkedList::getTail() const
 	return tail;
 }
 
+void LinkedList::setHead(Node* newHead)
+{
+	head = newHead;
+}
+
+void LinkedList::setTail(Node* newTail)
+{
+	tail = newTail;
+}
+
 void LinkedList::increaseLength()
 {
 	++length;

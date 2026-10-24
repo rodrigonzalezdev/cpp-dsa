@@ -27,6 +27,9 @@ public:
 	Node* getHead() const;
 	Node* getTail() const;
 
+	void setHead(Node* newHead); // A bit awkward but needed for the separate implementation of the Partition List problem
+	void setTail(Node* newTail);
+
 	void increaseLength();
 	void decreaseLength();
 
