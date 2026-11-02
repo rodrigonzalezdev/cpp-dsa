@@ -1,13 +1,12 @@
 #include "../LinkedLists.h"
-#include "Problems.h"
 
 /*
 	- In this instance we assume the Linked List does not have a tail
 */
 
-void removeDuplicates(LinkedList& list) // O(n^2), less efficient version - will implement more efficient version after I've studied sets
+void LinkedList::removeDuplicates() // O(n^2), less efficient version - will implement more efficient version after I've studied sets
 {
-	Node* current = list.getHead();
+	Node* current = head;
 	
 	while (current && current->next)
 	{
@@ -20,9 +19,9 @@ void removeDuplicates(LinkedList& list) // O(n^2), less efficient version - will
 				Node* temp = runner->next;
 				runner->next = temp->next;
 				delete temp;
-				list.decreaseLength();
+				--length;
 			}
-			else // Only advance runner if no deletion occured, to check for consecutive duplicates
+			else // Only advance runner if no deletion occurred, to check for consecutive duplicates
 			{
 				runner = runner->next;
 			}

@@ -1,5 +1,7 @@
 #pragma once
 
+#include <expected>
+
 //Node class
 class Node
 {
@@ -27,12 +29,6 @@ public:
 	Node* getHead() const;
 	Node* getTail() const;
 
-	void setHead(Node* newHead); // A bit awkward but needed for the separate implementation of the Partition List problem
-	void setTail(Node* newTail);
-
-	void increaseLength();
-	void decreaseLength();
-
 	void append(int value);
 	void removeLast();
 	void prepend(int value);
@@ -43,4 +39,24 @@ public:
 	void remove(int index);
 
 	void reverse();
+
+	// Leetcode problems
+
+	Node* findMiddleNode() const; // O(n)
+
+	bool hasLoop() const; // O(n)
+
+	Node* findKthFromEnd(int k) const; // O(n)
+
+	void removeDuplicates(); // O(n) (set) or O(n^2) (nested loop) depending on the implementation
+
+	enum class BinaryConversionError
+	{
+		InvalidDigit,
+		Overflow
+	};
+
+	std::expected<unsigned int, BinaryConversionError> binaryToDecimal() const; // O(n)
+
+	void partitionList(int value); // O(n)
 };

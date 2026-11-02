@@ -52,26 +52,6 @@ Node* LinkedList::getTail() const
 	return tail;
 }
 
-void LinkedList::setHead(Node* newHead)
-{
-	head = newHead;
-}
-
-void LinkedList::setTail(Node* newTail)
-{
-	tail = newTail;
-}
-
-void LinkedList::increaseLength()
-{
-	++length;
-}
-
-void LinkedList::decreaseLength()
-{
-	--length;
-}
-
 void LinkedList::append(int value) // O(1)
 {
 	Node* newNode = new Node(value);

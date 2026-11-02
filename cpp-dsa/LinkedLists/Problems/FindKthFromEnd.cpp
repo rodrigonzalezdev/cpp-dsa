@@ -1,17 +1,16 @@
 #include "../LinkedLists.h"
-#include "Problems.h"
 
 /*
 	- Not using length attribute
 	- Not allowed to calculate length
 */
 
-Node* findKthFromEnd(const LinkedList& list, int k) // O(n)
+Node* LinkedList::findKthFromEnd(int k) const // O(n)
 {
 	if (k <= 0) return nullptr;
 
-	Node* fast = list.getHead();
-	Node* slow = list.getHead();
+	Node* fast = head;
+	Node* slow = head;
 
 	for (int i = 0; i < k; i++)
 	{

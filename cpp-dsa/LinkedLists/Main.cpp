@@ -1,5 +1,4 @@
 #include "LinkedLists.h"
-#include "Problems/Problems.h"
 #include <iostream>
 
 int main()
@@ -14,7 +13,7 @@ int main()
 
 	list.printList();
 
-	auto result = binaryToDecimal(list);
+	auto result = list.binaryToDecimal();
 
 	if (result)
 	{
@@ -24,10 +23,10 @@ int main()
 	{
 		switch (result.error())
 		{
-		case BinaryConversionError::InvalidDigit:
-			std::cerr << "Error: Invalid binary nmber.";
+		case LinkedList::BinaryConversionError::InvalidDigit:
+			std::cerr << "Error: Invalid binary number.";
 			break;
-		case BinaryConversionError::Overflow:
+		case LinkedList::BinaryConversionError::Overflow:
 			std::cerr << "Error: Value exceeds unsigned int range.";
 			break;
 		default:

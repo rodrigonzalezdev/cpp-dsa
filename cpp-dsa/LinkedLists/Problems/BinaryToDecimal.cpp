@@ -1,6 +1,4 @@
 #include "../LinkedLists.h"
-#include "Problems.h"
-#include <expected>
 #include <limits>
 
 /*
@@ -9,11 +7,11 @@
 	- Working with unsigned ints
 */
 
-std::expected<unsigned int, BinaryConversionError> binaryToDecimal(const LinkedList& list) // O(n)
+std::expected<unsigned int, LinkedList::BinaryConversionError> LinkedList::binaryToDecimal() const // O(n)
 {
 	unsigned int decimal = 0;
 
-	Node* temp = list.getHead();
+	Node* temp = head;
 
 	while (temp)
 	{

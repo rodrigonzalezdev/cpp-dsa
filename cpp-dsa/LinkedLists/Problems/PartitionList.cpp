@@ -1,10 +1,7 @@
 #include "../LinkedLists.h"
-#include "Problems.h"
 
-void partitionList(LinkedList& list, int value) // O(n)
+void LinkedList::partitionList(int value) // O(n)
 {
-	Node* head = list.getHead();
-
 	if (!head)
 	{
 		return;
@@ -41,6 +38,6 @@ void partitionList(LinkedList& list, int value) // O(n)
 	Node* newHead = dummy1.next ? dummy1.next : dummy2.next;
 	Node* newTail = dummy2.next ? prev2 : prev1;
 
-	list.setHead(newHead);
-	list.setTail(newTail);
+	head = newHead;
+	tail = newTail;
 }
