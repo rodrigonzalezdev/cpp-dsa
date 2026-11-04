@@ -150,6 +150,7 @@
     <ClCompile Include="Problems\HasLoop.cpp" />
     <ClCompile Include="Problems\PartitionList.cpp" />
     <ClCompile Include="Problems\RemoveDuplicates.cpp" />
+    <ClCompile Include="Problems\ReverseBetween.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

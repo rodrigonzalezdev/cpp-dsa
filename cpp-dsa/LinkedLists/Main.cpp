@@ -6,34 +6,20 @@ int main()
 	
 	LinkedList list(1);
 
-	list.append(1);
-	list.append(1);
-	list.append(1);
-
+	list.append(2);
+	list.append(3);
+	list.append(4);
+	list.append(5);
 
 	list.printList();
 
-	auto result = list.binaryToDecimal();
+	std::cout << '\n';
 
-	if (result)
-	{
-		std::cout << "Decimal value: " << result.value() << std::endl;
-	}
-	else
-	{
-		switch (result.error())
-		{
-		case LinkedList::BinaryConversionError::InvalidDigit:
-			std::cerr << "Error: Invalid binary number.";
-			break;
-		case LinkedList::BinaryConversionError::Overflow:
-			std::cerr << "Error: Value exceeds unsigned int range.";
-			break;
-		default:
-			std::cerr << "Error.";
-		}
-	}
+	list.reverseBetween(1, 3);
 
+	list.printList();
+
+	std::cout << '\n';
 
 	return 0;
 }

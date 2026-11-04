@@ -59,4 +59,6 @@ public:
 	std::expected<unsigned int, BinaryConversionError> binaryToDecimal() const; // O(n)
 
 	void partitionList(int value); // O(n)
+
+	void reverseBetween(int index1, int index2); 
 };

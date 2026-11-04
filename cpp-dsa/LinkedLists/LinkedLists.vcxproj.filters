@@ -44,5 +44,8 @@
     <ClCompile Include="Problems\PartitionList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Problems\ReverseBetween.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
