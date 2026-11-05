@@ -15,7 +15,7 @@ int main()
 
 	std::cout << '\n';
 
-	list.reverseBetween(1, 3);
+	list.swapPairs();
 
 	list.printList();
 

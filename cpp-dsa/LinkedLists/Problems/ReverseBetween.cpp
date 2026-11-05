@@ -1,6 +1,6 @@
 #include "../LinkedLists.h"
 
-void LinkedList::reverseBetween(int index1, int index2)
+void LinkedList::reverseBetween(int index1, int index2) // O(n)
 {
 	if (index1 < 0 || index2 <= index1 || index2 >= length) return;
 

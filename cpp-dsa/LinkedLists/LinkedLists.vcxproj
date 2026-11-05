@@ -151,6 +151,7 @@
     <ClCompile Include="Problems\PartitionList.cpp" />
     <ClCompile Include="Problems\RemoveDuplicates.cpp" />
     <ClCompile Include="Problems\ReverseBetween.cpp" />
+    <ClCompile Include="Problems\SwapPairs.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

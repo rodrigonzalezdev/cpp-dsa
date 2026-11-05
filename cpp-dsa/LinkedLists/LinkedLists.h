@@ -60,5 +60,7 @@ public:
 
 	void partitionList(int value); // O(n)
 
-	void reverseBetween(int index1, int index2); 
+	void reverseBetween(int index1, int index2); // O(n)
+
+	void swapPairs();
 };
