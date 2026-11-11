@@ -1,6 +1,6 @@
 #include "../LinkedLists.h"
 
-void LinkedList::swapPairs()
+void LinkedList::swapPairs() // O(n)
 {
 	if (!head) return;
 

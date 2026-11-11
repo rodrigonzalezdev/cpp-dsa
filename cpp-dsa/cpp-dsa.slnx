@@ -3,5 +3,6 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
+  <Project Path="DoublyLinkedLists/DoublyLinkedLists.vcxproj" Id="a5eef377-2a6e-41ff-bb9d-ea574d13f179" />
   <Project Path="LinkedLists/LinkedLists.vcxproj" Id="26e4a782-4212-40bd-9060-932982bc636c" />
 </Solution>
