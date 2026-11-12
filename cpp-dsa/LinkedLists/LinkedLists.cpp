@@ -166,10 +166,7 @@ bool LinkedList::set(int index, int value) // O(n)
 {
 	Node* temp = get(index);
 
-	if (temp == nullptr)
-	{
-		return false;
-	}
+	if (!temp) return false;
 
 	temp->value = value;
 

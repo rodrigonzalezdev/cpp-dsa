@@ -62,5 +62,5 @@ public:
 
 	void reverseBetween(int index1, int index2); // O(n)
 
-	void swapPairs();
+	void swapPairs(); // O(n)
 };
