@@ -31,4 +31,10 @@ public:
 	bool set(int index, int value);
 	bool insert(int index, int value);
 	void remove(int index);
+
+
+	// Leetcode problems
+
+	bool isPalindrome();
+
 };

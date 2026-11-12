@@ -6,17 +6,23 @@ int main()
 {
 	DoublyLinkedList list(1);
 
-	list.printList();
-
 	list.append(2);
-	list.append(3);
-	list.prepend(0);
-	list.removeLast();
-	list.removeFirst();
+	list.append(4);
+	list.append(2);
+	list.append(1);
+
+	list.printList();
 
 	std::cout << '\n';
 	
-	list.printList();
+	if (list.isPalindrome())
+	{
+		std::cout << "It's a palindrome!\n";
+	}
+	else
+	{
+		std::cout << "It's not a palindrome!\n";
+	}
 
 
 	return 0;
