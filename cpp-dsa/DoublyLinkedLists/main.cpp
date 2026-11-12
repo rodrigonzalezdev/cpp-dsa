@@ -8,8 +8,10 @@ int main()
 
 	list.printList();
 
-
-
+	list.append(2);
+	list.append(3);
+	
+	list.printList();
 
 
 	return 0;

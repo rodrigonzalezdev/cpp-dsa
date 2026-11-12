@@ -22,4 +22,6 @@ public:
 	~DoublyLinkedList();
 
 	void printList() const;
+
+	void append(int value);
 };
