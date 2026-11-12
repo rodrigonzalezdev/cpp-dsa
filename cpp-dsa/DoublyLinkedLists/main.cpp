@@ -10,6 +10,10 @@ int main()
 
 	list.append(2);
 	list.append(3);
+	list.prepend(0);
+	list.removeLast();
+
+	std::cout << '\n';
 	
 	list.printList();
 

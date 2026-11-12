@@ -25,4 +25,5 @@ public:
 
 	void append(int value);
 	void removeLast();
+	void prepend(int value);
 };
