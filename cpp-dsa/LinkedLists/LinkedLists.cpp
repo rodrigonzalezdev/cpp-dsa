@@ -21,13 +21,11 @@ LinkedList::LinkedList(int value)
 
 LinkedList::~LinkedList()
 {
-	Node* temp = head;
-
 	while (head)
 	{
+		Node* temp = head;
 		head = head->next;
 		delete temp;
-		temp = head;
 	}
 }
 

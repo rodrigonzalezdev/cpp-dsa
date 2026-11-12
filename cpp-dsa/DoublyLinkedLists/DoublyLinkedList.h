@@ -19,6 +19,7 @@ private:
 
 public:
 	DoublyLinkedList(int value);
+	~DoublyLinkedList();
 
 	void printList() const;
 };

@@ -18,6 +18,16 @@ DoublyLinkedList::DoublyLinkedList(int value)
 	length = 1;
 }
 
+DoublyLinkedList::~DoublyLinkedList()
+{
+	while (head)
+	{
+		Node* temp = head;
+		head = head->next;
+		delete temp;
+	}
+}
+
 void DoublyLinkedList::printList() const
 {
 	Node* temp = head;
