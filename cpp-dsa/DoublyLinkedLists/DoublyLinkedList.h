@@ -24,4 +24,5 @@ public:
 	void printList() const;
 
 	void append(int value);
+	void removeLast();
 };

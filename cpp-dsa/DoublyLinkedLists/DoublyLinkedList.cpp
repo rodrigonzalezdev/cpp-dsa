@@ -58,3 +58,24 @@ void DoublyLinkedList::append(int value)
 
 	length++;
 }
+
+void DoublyLinkedList::removeLast()
+{
+	if (length == 0) return;
+
+	Node* temp = tail;
+
+	if (length == 1)
+	{
+		head = nullptr;
+		tail = nullptr;
+	}
+	else
+	{
+		tail = tail->prev;
+		tail->next = nullptr;
+	}
+
+	delete temp;
+	length--;
+}
