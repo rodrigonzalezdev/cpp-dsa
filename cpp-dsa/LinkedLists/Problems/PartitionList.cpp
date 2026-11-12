@@ -2,10 +2,7 @@
 
 void LinkedList::partitionList(int value) // O(n)
 {
-	if (!head)
-	{
-		return;
-	}
+	if (!head) return;
 
 	Node dummy1(0);
 	Node* prev1 = &dummy1;

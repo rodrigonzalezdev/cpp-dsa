@@ -145,6 +145,7 @@
     <ClCompile Include="DoublyLinkedList.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Problems\IsPalindrome.cpp" />
+    <ClCompile Include="Problems\PartitionList.cpp" />
     <ClCompile Include="Problems\Reverse.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -37,5 +37,6 @@ public:
 
 	bool isPalindrome(); // O(n)
 	void reverse(); // O(n)
+	void partitionList(int value); // O(n)
 
 };
