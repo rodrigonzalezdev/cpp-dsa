@@ -77,6 +77,7 @@ void DoublyLinkedList::removeLast()
 	}
 
 	delete temp;
+
 	length--;
 }
 
@@ -97,4 +98,26 @@ void DoublyLinkedList::prepend(int value)
 	}
 
 	length++;
+}
+
+void DoublyLinkedList::removeFirst()
+{
+	if (length == 0) return;
+
+	Node* temp = head;
+
+	if (length == 1)
+	{
+		head = nullptr;
+		tail = nullptr;
+	}
+	else
+	{
+		head = head->next;
+		head->prev = nullptr;
+	}
+
+	delete temp;
+
+	length--;
 }

@@ -12,6 +12,7 @@ int main()
 	list.append(3);
 	list.prepend(0);
 	list.removeLast();
+	list.removeFirst();
 
 	std::cout << '\n';
 	
