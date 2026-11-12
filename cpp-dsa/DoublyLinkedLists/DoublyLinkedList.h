@@ -35,6 +35,7 @@ public:
 
 	// Leetcode problems
 
-	bool isPalindrome();
+	bool isPalindrome(); // O(n)
+	void reverse(); // O(n)
 
 };

@@ -1,6 +1,6 @@
 #include "../DoublyLinkedList.h"
 
-bool DoublyLinkedList::isPalindrome()
+bool DoublyLinkedList::isPalindrome() // O(n)
 {
 	if (length == 0 || length == 1) return true;
 
