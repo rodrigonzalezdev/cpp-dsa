@@ -190,3 +190,21 @@ bool DoublyLinkedList::insert(int index, int value)
 
 	return true;
 }
+
+void DoublyLinkedList::remove(int index)
+{
+	if (index < 0 || index >= length) return;
+
+	if (index == 0) return removeFirst();
+
+	if (index == length - 1) return removeLast();
+
+	Node* temp = get(index);
+
+	temp->prev->next = temp->next;
+	temp->next->prev = temp->prev;
+
+	delete temp;
+
+	length--;
+}
